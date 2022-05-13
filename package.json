@@ -18,7 +18,7 @@
     "lua",
     "cli"
   ],
-  "author": "Rethinkify",
+  "author": "rethinkify",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Rethinkify/honeybun/issues"
