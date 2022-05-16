@@ -29,6 +29,7 @@
     "lua-format": "github:RealNickk/luamin.js",
     "moment": "^2.29.3",
     "parse-git-config": "^3.0.0",
+    "toml": "^3.0.0",
     "url": "^0.11.0"
   }
 }
