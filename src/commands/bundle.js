@@ -8,14 +8,12 @@ import luamin from "lua-format";
 import escape from "./../modules/escape.js";
 import { __srcname } from "./../modules/dir.js";
 
-
 /* Command Setup */
 const cmd = cli.command("bundle");
 cmd.description("Bundles a source directory of Lua files into one standalone source file.");
 cmd.argument("<source>", "source directory path");
 cmd.option("-d --debug", "skip minification of source files", false);
 cmd.option("-e --entry <string>", "the entry source file path", "init");
-
 
 /* Utility */
 function getSourceFiles(dir, list, top) {
@@ -46,7 +44,6 @@ function getSourceFiles(dir, list, top) {
 /* Source Constants */
 const minifySettings = { RenameVariables: true };
 const requireHook = luamin.Minify(fs.readFileSync(path.join(__srcname, "static/requireHook.lua")).toString(), minifySettings);
-
 
 /* Command Execution */
 cmd.action(async (source, args) => {
