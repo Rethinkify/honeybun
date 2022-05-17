@@ -2,10 +2,8 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - name: Install Dependencies
-    init: npm ci
-  - name: Run Test
-    init: npm run test
+  - name: Initialize
+    init: npm ci && npm run test
 
 vscode:
   extensions:
