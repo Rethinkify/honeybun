@@ -7,11 +7,12 @@ import toml from "toml";
 /* Utilities */
 function findInGit(prop) {
     try {
-        console.log(execSync("git config --get " + prop));
-        const output = execSync("git config --get " + prop).stdout.trim();
+        const output = execSync("git config --get " + prop)
+            .toString()
+            .trim();
         return output.length == 0 ? null : output;
     } catch (e) {
-        return e;
+        return e.stderr.toString().trim();
     }
 }
 
@@ -34,7 +35,6 @@ export default function (configPath) {
         config = toml.parse(fs.readFileSync(configPath).toString());
     }
 
-    console.log(findInGit("user.name"));
     config.project = config.project ?? {};
     config.project.url = config.project.url ?? findInGit("remote.origin.url");
     config.project.name = config.project.name ?? (config.project.url ? path.parse(new URL(config.project.url).pathname).name : null);
