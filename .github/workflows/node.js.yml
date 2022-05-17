@@ -23,7 +23,7 @@ jobs:
         cache: 'npm'
         
     - name: Install Prerequisites
-      run: sudo apt-get install -y git
+      run: sudo apt-get install -y git luajit
       
     - name: Install Project
       run: npm ci
