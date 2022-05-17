@@ -1,4 +1,3 @@
-
 image:
   file: .gitpod.Dockerfile
 
@@ -7,7 +6,7 @@ tasks:
     init: npm ci
   - name: Run Test
     init: npm run test
-    command: npm run test
+
 vscode:
   extensions:
     - bungcip.better-toml
