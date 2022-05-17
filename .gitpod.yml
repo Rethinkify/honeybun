@@ -1,0 +1,11 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Initialize
+    init: npm ci && npm run test
+
+vscode:
+  extensions:
+    - bungcip.better-toml
+    - esbenp.prettier-vscode

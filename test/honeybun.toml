@@ -1,0 +1,6 @@
+[project]
+name = "Build Test"
+outFile = "build/bundle.lua"
+
+[author]
+name = "Nicholas"
