@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "node src/index.js bundle test"
+    "test": "node src/index.js bundle test && node src/test.js build/bundle.lua"
   },
   "bin": {
     "honeybun": "./src/index.js"
