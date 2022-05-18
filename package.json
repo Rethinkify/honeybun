@@ -27,6 +27,7 @@
   "dependencies": {
     "commander": "^9.2.0",
     "lua-format": "github:RealNickk/luamin.js",
+    "luaparse": "^0.3.1",
     "moment": "^2.29.3",
     "parse-git-config": "^3.0.0",
     "toml": "^3.0.0",
