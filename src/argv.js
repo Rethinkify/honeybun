@@ -1,6 +1,7 @@
 /* Modules */
 import { program as cli } from "commander";
 import fs from "fs";
+import { pathToFileURL } from "url"; // Fuck you Microsoft
 import path from "path";
 import sourceDir from "./modules/dir.js";
 
@@ -11,7 +12,7 @@ for (let cmdModule of fs.readdirSync(path.join(sourceDir, "commands"))) { // i a
         params,
         options,
         callback,
-    } = await import(path.join(sourceDir, "commands", cmdModule));
+    } = await import(pathToFileURL(path.join(sourceDir, "commands", cmdModule)));
     const cmd = cli.command(path.parse(cmdModule).name);
 
     if (description) {
